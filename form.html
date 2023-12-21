@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Oginga odinga</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+    
+
+    header {
+      background-color: papayawhip;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: papayawhip;
+      padding: 10px;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    nav {
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: whitesmoke;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: black;
+    }
+ </style>
+ <script>
+    function showInfo() {
+      document.getElementById("info").style.display = "block";
+    }
+ </script>
+</head>
+<body>
+
+<header>
+ <h1>Oginga Odinga</h1>
+</header>
+
+<nav>
+ <a href="index.html">Index</a>
+ <a href="references.html">References</a>
+ <a href="form.html">Form</a>
+</nav>
+
+
+<div style="padding: 20px; margin-top: 20px;">
+
+ <h2>Form</h2>
+ <figure>
+  
+  <figcaption>Oginga Odinga</figcaption>
+ </figure>
+ 
+ 
+ <form onsubmit="event.preventDefault(); showInfo();">
+  <fieldset>
+    <legend>What is  Oginga`s birth name and year of birth?</legend>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="year">Year:</label><br>
+    <input type="text" id="year" name="year" required><br>
+    <input type="submit" value="Submit" id="clicky">
+    </fieldset>
+ </form>
+
+ <div id="info" style="display: none;">
+   <h2>Your Answer</h2>
+   <p>Name: <span id="displayName"></span></p>
+   <p>Year: <span id="displayYear"></span></p>
+ </div>
+</div>
+
+<footer>
+ <p>Last updated: September 20, 1993</p>
+</footer>
+
+
+<script>
+    document.getElementById("clicky").onclick = function(){
+         var thename = document.getElementById("name").value;
+        document.getElementById("displayName").innerText = thename;
+
+        var theyear = document.getElementById("year").value;
+        document.getElementById("displayYear").innerText = theyear;
+    }
+</script>
+
+</body>
+</html>
